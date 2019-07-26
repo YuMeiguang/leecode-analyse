@@ -19,7 +19,7 @@
     <modules>
         <module>leecode-easy</module>
         <module>leecode-hard</module>
-        <module>leecode-hard</module>
+        <module>leecode-medium</module>
     </modules>
 
     <dependencies>

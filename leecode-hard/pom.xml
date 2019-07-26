@@ -13,7 +13,7 @@
     <groupId>com.ymg</groupId>
     <artifactId>leecode-hard</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
 
     <dependencies>
