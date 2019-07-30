@@ -5,8 +5,9 @@ import java.util.HashMap;
 /**
  * @author yumg
  * @create 2019/07/26
- * @desc
+ * @desc leecode 3
  * @since 1.0.0
+ * TODO 难度
  **/
 public class LongestSubstringWithoutRepeatingCharacters {
     public LongestSubstringWithoutRepeatingCharacters() {
@@ -14,28 +15,23 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
         String sourceStr = "abcabcbb";
-        System.out.println();
         System.out.println(getLength(sourceStr));
     }
 
     private static Integer getLength(String sourceStr) {
-        char[] characters = sourceStr.toCharArray();
-        int length = 0;
-
-        for(int i = 0; i < characters.length; ++i) {
-            HashMap map = new HashMap();
-            map.put(Character.valueOf(characters[i]), Integer.valueOf(i));
-
-            for(int j = i; j < characters.length; ++j) {
-                if(map.containsKey(Character.valueOf(characters[j]))) {
-                    length = Math.max(length, map.size());
-                    break;
-                }
-
-                map.put(Character.valueOf(characters[j]), Integer.valueOf(j));
+        if (sourceStr.length() == 0){
+            return 0;
+        }
+        HashMap<Character,Integer> map = new HashMap<>();
+        int max = 0;
+        for (int i = 0,j=0; i < sourceStr.length(); i++) {
+            if (map.containsKey(sourceStr.charAt(i))){
+                j = Math.max(j,map.get(sourceStr.charAt(i)) +i);
             }
+            map.put(sourceStr.charAt(i),i);
+            max = Math.max(max,i-j+1);
         }
 
-        return Integer.valueOf(length);
+        return max;
     }
 }
