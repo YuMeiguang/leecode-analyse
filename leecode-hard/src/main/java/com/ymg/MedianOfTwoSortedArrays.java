@@ -9,12 +9,82 @@ package com.ymg;
  **/
 public class MedianOfTwoSortedArrays {
     public static void main(String[] args) {
-        int[] A = new int[5];A[0] = 1;A[1] = 2; A[2]=4;A[3]=6;A[4]=7;
-        // 1,2,2,3,4,5,6,7
-        int[] B = new int[3];B[0] = 2;B[1] = 4;A[2]=5;
+        int[] A = {1,2,3,5,6,8,9};
+        int[] B = {7,9,10,12};
         // 1 2 3 4 4
-        System.out.println(findMedianSortedArrays(A,B));
-        System.out.println(findMedianSortedArrays1(A,B));
+        System.out.println(findMedianSortedArrays3(A,B));
+    }
+
+    public static double findMedianSortedArrays3(int[] nums1,int[] nums2){
+        int m = nums1.length;
+        int n = nums2.length;
+        int len = m+n;
+        if (len%2==0){
+            double left = findKthHelper1(nums1,0,nums2,0,len/2);
+            double right = findKthHelper1(nums1,0,nums2,0,len/2 +1);
+            return left+right;
+        }else{
+            return findKthHelper1(nums1,0,nums2,0,len/2 +1);
+        }
+    }
+
+
+    public static double findMedianSortedArrays2(int[] nums1, int[] nums2) {
+        int m = nums1.length;
+        int n = nums2.length;
+        int len = m + n;
+        if(len % 2 == 0){
+            double left =  (double)findKthHelper(nums1, 0, nums2, 0, len/2);
+            double right =  (double)findKthHelper(nums1, 0, nums2, 0, len/2 + 1);
+            return (double)(left + right)/2;
+        }else{
+            return findKthHelper(nums1, 0, nums2, 0, len/2 + 1);
+        }
+    }
+
+    private static double findKthHelper1(int[] A, int aStart, int[] B, int bStart, int k) {
+        if (aStart >= A.length){
+            return B[bStart+k-1];
+        }
+        if (bStart >= B.length){
+            return A[aStart+k-1];
+        }
+
+        if (k == 1){
+            return Math.min(A[aStart],B[bStart]);
+        }
+
+        int aMid = aStart + k/2 -1;
+        int bMid = bStart + k/2 -1;
+        int aVal = aMid >= A.length ? Integer.MAX_VALUE:A[aMid];
+        int bVal = bMid >= B.length ? Integer.MAX_VALUE:B[bMid];
+        if (aVal <= bVal){
+            return findKthHelper1(A,aMid+1,B,bStart,k-k/2);
+        }else{
+            return findKthHelper1(A,aStart,B,bMid+1,k-k/2);
+        }
+
+    }
+
+    private static int findKthHelper(int[] A, int aStart, int[] B, int bStart, int k){
+        if(aStart >= A.length){
+            return B[bStart + k - 1];
+        }
+        if(bStart >= B.length){
+            return A[aStart + k - 1];
+        }
+        if(k == 1){
+            return Math.min(A[aStart], B[bStart]);
+        }
+        int aMid = aStart + k/2 - 1;
+        int bMid = bStart + k/2 - 1;
+        int aVal = aMid >= A.length ? Integer.MAX_VALUE : A[aMid];
+        int bVal = bMid >= B.length ? Integer.MAX_VALUE : B[bMid];
+        if(aVal <= bVal){
+            return findKthHelper(A, aMid + 1, B, bStart, k - k/2);
+        }else{
+            return findKthHelper(A, aStart, B, bMid + 1, k - k/2);
+        }
     }
 
     public static double findMedianSortedArrays1(int[] A,int[] B){
