@@ -3,7 +3,7 @@ package com.ymg;
 /**
  * @author yumg
  * @create 2019/08/01
- * @desc
+ * @desc leetcode 7
  * @since 1.0.0
  **/
 public class StringToInteger {
