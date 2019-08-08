@@ -5,6 +5,20 @@ package com.ymg;
  * @create 2019/08/06
  * @desc leecode 10
  * @since 1.0.0
+图示例
+  mis*is*ip*.
+ 100000000000
+m010000000000
+i001010000000
+s000110000000
+s000010000000
+i000001010000
+s000000110000
+s000000010000
+i000000001010
+p000000000111
+p000000000011
+i000000000001
  **/
 public class RegularExpressionMatching {
     public static void main(String[] args) {
