@@ -3,7 +3,7 @@ package com.ymg;
 /**
  * @author yumg
  * @create 2019/08/07
- * @desc leecode 13
+ * @desc Leetcode 13
  * @since 1.0.0
  * 字符  数值
  * I    1

@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @author yumg
  * @create 2019/07/25
- * @desc  leecode 1
+ * @desc  Leetcode 1
  * @since 1.0.0
  * @example Given nums = [2, 7, 11, 15], target = 9
  * 每个元素不能使用两次

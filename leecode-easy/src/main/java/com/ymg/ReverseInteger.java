@@ -3,7 +3,7 @@ package com.ymg;
 /**
  * @author yumg
  * @create 2019/08/01
- * @desc leetcode 8
+ * @desc Leetcode 8
  * @since 1.0.0
  **/
 public class ReverseInteger {

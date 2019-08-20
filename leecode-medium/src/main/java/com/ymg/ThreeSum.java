@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * @author yumg
  * @create 2019/08/07
- * @desc leecode 15
+ * @desc Leetcode 15
  * @since 1.0.0
  **/
 public class ThreeSum {

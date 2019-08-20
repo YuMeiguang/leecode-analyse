@@ -3,7 +3,7 @@ package com.ymg;
 /**
  * @author yumg
  * @create 2019/08/06
- * @desc leecode 10
+ * @desc Leetcode 10
  * @since 1.0.0
 图示例
   mis*is*ip*.

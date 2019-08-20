@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @author yumg
  * @create 2019/07/31
- * @desc leecode 6
+ * @desc Leetcode 6
  * @since 1.0.0
  **/
 public class ZigZagConversion {

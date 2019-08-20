@@ -3,7 +3,7 @@ package com.ymg;
 /**
  * @author yumg
  * @create 2019/08/08
- * @desc
+ * @desc  Leetcode 19
  * @since 1.0.0
  **/
 public class RemoveNthNodeFromEndOfList {

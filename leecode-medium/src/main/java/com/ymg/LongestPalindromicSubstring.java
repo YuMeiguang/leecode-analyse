@@ -3,7 +3,7 @@ package com.ymg;
 /**
  * @author yumg
  * @create 2019/07/26
- * @desc
+ * @desc Leetcode 5
  * @since 1.0.0
  **/
 public class LongestPalindromicSubstring {

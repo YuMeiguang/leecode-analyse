@@ -3,7 +3,7 @@ package com.ymg;
 /**
  * @author yumg
  * @create 2019/08/15
- * @desc Leecode 21
+ * @desc Leetcode 21
  * @since 1.0.0
  **/
 public class MergeTwoLists {

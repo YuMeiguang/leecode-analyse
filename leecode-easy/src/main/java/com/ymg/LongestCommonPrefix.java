@@ -3,7 +3,7 @@ package com.ymg;
 /**
  * @author yumg
  * @create 2019/08/07
- * @desc leecode 14
+ * @desc Leetcode 14
  * @since 1.0.0
  **/
 public class LongestCommonPrefix {

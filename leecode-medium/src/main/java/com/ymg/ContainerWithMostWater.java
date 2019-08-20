@@ -3,7 +3,7 @@ package com.ymg;
 /**
  * @author yumg
  * @create 2019/08/06
- * @desc leecode 11
+ * @desc Leetcode 11
  * @since 1.0.0
  **/
 public class ContainerWithMostWater {

@@ -5,7 +5,7 @@ import java.util.Stack;
 /**
  * @author yumg
  * @create 2019/08/08
- * @desc leecode 20
+ * @desc Leetcode 20
  * @since 1.0.0
  **/
 public class ValidParentheses {
